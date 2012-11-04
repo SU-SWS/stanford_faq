@@ -1,8 +1,8 @@
 name = Stanford FAQ
-description = FAQ content type and block view.
+description = FAQ content type and block views.
 core = 7.x
 package = Stanford
-version = 7.x-1.0-alpha1
+version = 7.x-1.0-alpha2
 project = stanford_faq
 dependencies[] = ctools
 dependencies[] = features
@@ -21,3 +21,4 @@ features[field][] = node-stanford_faq-field_s_faq_rating
 features[node][] = stanford_faq
 features[taxonomy][] = stanford_display_categories
 features[views_view][] = stanford_faqs
+project status url = http://drupalfeatures.stanford.edu/fserver/stanford_faq/7.x

@@ -8,7 +8,7 @@
  * Implements hook_views_api().
  */
 function stanford_faq_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**

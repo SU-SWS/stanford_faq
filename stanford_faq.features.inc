@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_api().
  */
-function stanford_faq_views_api() {
+function stanford_faq_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 

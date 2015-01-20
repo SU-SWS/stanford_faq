@@ -31,6 +31,10 @@ function stanford_faq_views_block_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Display Categories (field_s_faq_categories) */
+  $handler->display->display_options['relationships']['field_s_faq_categories_tid']['id'] = 'field_s_faq_categories_tid';
+  $handler->display->display_options['relationships']['field_s_faq_categories_tid']['table'] = 'field_data_field_s_faq_categories';
+  $handler->display->display_options['relationships']['field_s_faq_categories_tid']['field'] = 'field_s_faq_categories_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -55,28 +59,22 @@ function stanford_faq_views_block_views_default_views() {
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['id'] = 'field_s_faq_weight_value';
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['table'] = 'field_data_field_s_faq_weight';
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['field'] = 'field_s_faq_weight_value';
-  /* Contextual filter: Global: Null */
-  $handler->display->display_options['arguments']['null']['id'] = 'null';
-  $handler->display->display_options['arguments']['null']['table'] = 'views';
-  $handler->display->display_options['arguments']['null']['field'] = 'null';
-  $handler->display->display_options['arguments']['null']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['null']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['null']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['null']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['null']['default_argument_options']['anyall'] = '+';
-  $handler->display->display_options['arguments']['null']['default_argument_options']['vocabularies'] = array(
+  /* Contextual filter: Content: Display Categories (field_s_faq_categories) */
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['id'] = 'field_s_faq_categories_tid';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['table'] = 'field_data_field_s_faq_categories';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['field'] = 'field_s_faq_categories_tid';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['vocabularies'] = array(
     'stanford_faq_categories' => 'stanford_faq_categories',
   );
-  $handler->display->display_options['arguments']['null']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['null']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['null']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['null']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['null']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['null']['validate_options']['vocabularies'] = array(
-    'stanford_faq_categories' => 'stanford_faq_categories',
-  );
-  $handler->display->display_options['arguments']['null']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['null']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate']['fail'] = 'ignore';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford FAQ Views Block feature.
+ */
+
+include_once 'stanford_faq_views_block.features.inc';

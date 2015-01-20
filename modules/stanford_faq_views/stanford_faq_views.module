@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford FAQ Views feature.
+ */
+
+include_once 'stanford_faq_views.features.inc';

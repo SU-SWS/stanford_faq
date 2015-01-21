@@ -35,6 +35,7 @@ function stanford_faq_views_block_views_default_views() {
   $handler->display->display_options['relationships']['field_s_faq_categories_tid']['id'] = 'field_s_faq_categories_tid';
   $handler->display->display_options['relationships']['field_s_faq_categories_tid']['table'] = 'field_data_field_s_faq_categories';
   $handler->display->display_options['relationships']['field_s_faq_categories_tid']['field'] = 'field_s_faq_categories_tid';
+  $handler->display->display_options['relationships']['field_s_faq_categories_tid']['required'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -55,26 +56,52 @@ function stanford_faq_views_block_views_default_views() {
   $handler->display->display_options['fields']['field_s_faq_categories']['label'] = '';
   $handler->display->display_options['fields']['field_s_faq_categories']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_faq_categories']['delta_offset'] = '0';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Weight (field_s_faq_weight) */
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['id'] = 'field_s_faq_weight_value';
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['table'] = 'field_data_field_s_faq_weight';
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['field'] = 'field_s_faq_weight_value';
-  /* Contextual filter: Content: Display Categories (field_s_faq_categories) */
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['id'] = 'field_s_faq_categories_tid';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['table'] = 'field_data_field_s_faq_categories';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['field'] = 'field_s_faq_categories_tid';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['vocabularies'] = array(
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['title'] = '% FAQs';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = FALSE;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
     'stanford_faq_categories' => 'stanford_faq_categories',
   );
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate_options']['transform'] = TRUE;
-  $handler->display->display_options['arguments']['field_s_faq_categories_tid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'stanford_faq_categories' => 'stanford_faq_categories',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

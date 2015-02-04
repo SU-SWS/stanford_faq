@@ -23,7 +23,8 @@ function stanford_faq_field_group_info() {
     'label' => 'Advanced',
     'weight' => '7',
     'children' => array(
-      0 => 'field_s_faq_weight',
+      0 => 'field_detailed_question',
+      1 => 'field_s_faq_weight',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

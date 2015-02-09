@@ -13,7 +13,7 @@ function stanford_faq_taxonomy_default_vocabularies() {
       'name' => 'Stanford FAQ Categories',
       'machine_name' => 'stanford_faq_categories',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

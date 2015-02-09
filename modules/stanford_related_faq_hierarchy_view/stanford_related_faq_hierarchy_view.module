@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Related FAQ Hierarchy View feature.
+ */
+
+include_once 'stanford_related_faq_hierarchy_view.features.inc';

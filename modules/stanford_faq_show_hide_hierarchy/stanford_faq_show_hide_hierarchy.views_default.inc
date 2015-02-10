@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * stanford_related_faq_hierarchy_view.views_default.inc
+ * stanford_faq_show_hide_hierarchy.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function stanford_related_faq_hierarchy_view_views_default_views() {
+function stanford_faq_show_hide_hierarchy_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'stanford_related_faq_hierarchy_block';
+  $view->name = 'stanford_show_hide_faq_hierarchy';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Stanford Related FAQ Hierarchy Block';
+  $view->human_name = 'Stanford show/hide FAQ hierarchy';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -39,21 +39,44 @@ function stanford_related_faq_hierarchy_view_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: FAQ: FAQ category tid */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'faq_weights';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'collapse[tid]-[nid]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="[nid]" aria-expanded="false" class="btn btn-faq" href="#[nid]" data-toggle="collapse" type="button"> <h4>[title]</h4></a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h4';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="collapse" id="[nid]">
+<p>[body]</p>
+</div>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Display categories */
   $handler->display->display_options['fields']['field_s_faq_category']['id'] = 'field_s_faq_category';
@@ -115,8 +138,8 @@ function stanford_related_faq_hierarchy_view_views_default_views() {
   );
 
   /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'faq_block');
-  $export['stanford_related_faq_hierarchy_block'] = $view;
+  $handler = $view->new_display('block', 'Block', 'faq_hierarchy_collapse_block');
+  $export['stanford_show_hide_faq_hierarchy'] = $view;
 
   return $export;
 }

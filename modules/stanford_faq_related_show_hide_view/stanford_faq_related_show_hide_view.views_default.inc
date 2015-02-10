@@ -54,7 +54,7 @@ function stanford_faq_related_show_hide_view_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3 aria-controls="[nid]" aria-expanded="false" class="btn btn-primary" data-target="#[nid]" data-toggle="collapse" type="button"> [title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="[nid]" aria-expanded="false" class="btn btn-faq" href="#[nid]" data-toggle="collapse" type="button"> <h4>[title]</h4></a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;

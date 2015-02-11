@@ -1,5 +1,5 @@
 name = Stanford FAQ
-description = FAQ Content type and manage view 
+description = FAQ Content type and manage view
 core = 7.x
 package = Stanford
 version = 7.x-4.0-alpha1

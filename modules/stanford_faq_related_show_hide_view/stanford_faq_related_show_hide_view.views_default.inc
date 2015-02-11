@@ -57,6 +57,8 @@ function stanford_faq_related_show_hide_view_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="[nid]" aria-expanded="false" class="collapse-toggle" href="#[nid]" data-toggle="collapse" type="button"> <h4>[title]</h4></a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;

@@ -83,6 +83,7 @@ function stanford_faq_show_hide_hierarchy_views_default_views() {
   $handler->display->display_options['fields']['field_s_faq_category']['table'] = 'field_data_field_s_faq_category';
   $handler->display->display_options['fields']['field_s_faq_category']['field'] = 'field_s_faq_category';
   $handler->display->display_options['fields']['field_s_faq_category']['label'] = '';
+  $handler->display->display_options['fields']['field_s_faq_category']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_faq_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_faq_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_faq_category']['group_columns'] = array(

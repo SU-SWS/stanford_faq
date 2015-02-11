@@ -41,6 +41,7 @@ function stanford_faq_related_views_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -52,6 +53,7 @@ function stanford_faq_related_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_faq_category']['table'] = 'field_data_field_s_faq_category';
   $handler->display->display_options['fields']['field_s_faq_category']['field'] = 'field_s_faq_category';
   $handler->display->display_options['fields']['field_s_faq_category']['label'] = '';
+  $handler->display->display_options['fields']['field_s_faq_category']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_faq_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_faq_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_faq_category']['delta_offset'] = '0';

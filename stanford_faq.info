@@ -25,5 +25,6 @@ features[field_instance][] = node-faq-field_s_faq_weight
 features[taxonomy][] = stanford_faq_categories
 features[variable][] = menu_options_faq
 features[variable][] = node_options_faq
+features[variable][] = pathauto_node_faq_pattern
 features[views_view][] = stanford_faq_manage
 project path = sites/all/modules/stanford

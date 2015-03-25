@@ -5,3 +5,13 @@
  */
 
 include_once 'stanford_faq.features.inc';
+
+/**
+ * Implements hook_views_pre_render
+ */
+function stanford_faq_views_pre_render(&$view) {
+  // Add aria help to show hide view for faqs.
+  if ($view->name == "stanford_show_hide_faq_hierarchy") {
+    drupal_add_js(drupal_get_path("module", "stanford_faq") . "/js/stanford_faq.js");
+  }
+}

@@ -1,7 +1,7 @@
 (function ($) {
 
 /**
- * Drupal attach behaviour`.
+ * Drupal attach behaviour.
  */
 Drupal.behaviors.stanford_faq = {
   attach: function (context, settings) {

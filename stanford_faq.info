@@ -28,4 +28,4 @@ features[variable][] = node_options_faq
 features[variable][] = nodeformscols_field_placements_faq_default
 features[variable][] = pathauto_node_faq_pattern
 features[views_view][] = stanford_faq_manage
-project path = sites/all/modules/stanford
+project status url = https://github.com/SU-SWS/stanford_faq

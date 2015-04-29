@@ -1,0 +1,39 @@
+.view-stanford-show-hide-faq-hierarchy h3 {
+    margin-top: 1.5em;   
+}
+.view-stanford-show-hide-faq-hierarchy .views-row {
+    margin-bottom: 0.25em;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row h4 {
+    margin: 0;
+    padding-right: 1em;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row .collapse-toggle h4:after {
+    content: "–";
+    float: right;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #999999;
+    margin-right: -0.5em;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row .collapse-toggle.collapsed h4:after {
+    content: "+";
+}
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a {
+    display: block;
+    padding: 1em;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a.collapsed {
+    background: #eeeeee;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row div.views-field-body {
+    padding: 0 1em;
+    background: #ffffff;
+}
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a:hover,
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a:focus,
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a,
+.view-stanford-show-hide-faq-hierarchy .views-row > div:first-child a.collapsed:hover {
+    background: #ffffff;
+    text-decoration: none;
+}

@@ -3,18 +3,20 @@
 }
 .view-stanford-show-hide-faq-hierarchy .views-row {
     margin-bottom: 0.25em;
+    position: relative;
 }
 .view-stanford-show-hide-faq-hierarchy .views-row h4 {
     margin: 0;
-    padding-right: 1em;
+    padding-right: 2em;
 }
 .view-stanford-show-hide-faq-hierarchy .views-row .collapse-toggle h4:after {
     content: "–";
-    float: right;
     font-size: 1.5em;
     font-weight: 700;
     color: #999999;
-    margin-right: -0.5em;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
 }
 .view-stanford-show-hide-faq-hierarchy .views-row .collapse-toggle.collapsed h4:after {
     content: "+";

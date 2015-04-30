@@ -7,7 +7,7 @@
 include_once 'stanford_faq.features.inc';
 
 /**
- * Implements hook_preprocess().
+ * Implements hook_preprocess_HOOK().
  */
 function stanford_faq_preprocess_page(&$vars) {
   $current_path = current_path();

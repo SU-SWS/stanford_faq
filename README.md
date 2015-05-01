@@ -30,9 +30,9 @@ After this module is installed and enabled:
 2. Add FAQ term reference to content types. 
 ⋅⋅* Allow only one term per content type
 ⋅⋅* On the Manage Display for the content type, hide the FAQ field from display
-2. Create a context to display the FAQs 
-⋅⋅* For the condition, consider either path or node type
-⋅⋅* For the reaction, place the appropriate block view
+2. Create a context to display FAQs with the related node
+⋅⋅* For the condition, consider using either path or node type
+⋅⋅* For the reaction, place the appropriate FAQ block view
 
 
 Contribution / Collaboration

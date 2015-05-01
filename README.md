@@ -19,11 +19,20 @@ Installation
 ---
 
 Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-7)
+This depends on the [FAQ contrib module] (https://www.drupal.org/project/faq). It will need to be installed and enabled.
 
 Configuration
 ---
 
-Nothing special needed.
+After this module is installed and enabled:
+Navigate to the taxonomy page and create terms for FAQ Categories
+For each content type you would like to show related FAQs, 
+add a FAQ term reference field. 
+On the Manage Display for the content type, hide the FAQ field from display
+Create a context to display the FAQs 
+For the condition, consider either path or node type
+For the reaction, place the appropriate block view
+
 
 Contribution / Collaboration
 ---

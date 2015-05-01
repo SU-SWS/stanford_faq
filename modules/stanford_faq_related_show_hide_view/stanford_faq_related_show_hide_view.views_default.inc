@@ -54,7 +54,7 @@ function stanford_faq_related_show_hide_view_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="[nid]" aria-expanded="false" class="collapse-toggle" href="#[nid]" data-toggle="collapse" type="button"> <h4>[title]</h4></a>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="faq-[nid]" aria-expanded="false" class="collapse-toggle collapsed" href="#faq-[nid]" data-toggle="collapse" type="button"><h4>[title]</h4></a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
@@ -68,8 +68,8 @@ function stanford_faq_related_show_hide_view_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="collapse" id="[nid]">
-<p>[body]</p>
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="collapse" id="faq-[nid]">
+[body]
 </div>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */

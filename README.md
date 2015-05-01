@@ -25,13 +25,13 @@ Configuration
 ---
 
 After this module is installed and enabled:
-Navigate to the taxonomy page and create terms for FAQ Categories
-For each content type you would like to show related FAQs, 
-add a FAQ term reference field. 
-On the Manage Display for the content type, hide the FAQ field from display
-Create a context to display the FAQs 
-For the condition, consider either path or node type
-For the reaction, place the appropriate block view
+1. Create terms for FAQ Categories
+2. Add FAQ term reference to content types. 
+..*Allow only one term per content type
+..*On the Manage Display for the content type, hide the FAQ field from display
+2. Create a context to display the FAQs 
+..*For the condition, consider either path or node type
+..*For the reaction, place the appropriate block view
 
 
 Contribution / Collaboration

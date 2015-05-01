@@ -25,6 +25,7 @@ Configuration
 ---
 
 After this module is installed and enabled:
+
 1. Create terms for FAQ Categories
 2. Add FAQ term reference to content types. 
 ..* Allow only one term per content type

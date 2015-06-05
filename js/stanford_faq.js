@@ -22,6 +22,16 @@ Drupal.behaviors.stanford_faq = {
     }
   });
 
+  // Prevent space bar from jumping down page and expand the thing!
+  toggles.keydown(function (e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if (key == 32) {
+      e.preventDefault();
+      $(this).trigger("click");
+    }
+  });
+
+
   }
 };
 

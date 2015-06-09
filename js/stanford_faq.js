@@ -26,12 +26,13 @@ Drupal.behaviors.stanford_faq = {
     // Which one was clicked.
     var index = toggles.index($(this));
     $(this).parents(".view-content").find("div.collapse").filter(":not('.in')").find("a").attr("tabindex", "-1");
-    $(this).parents(".view-content").find("div.collapse").eq(index).find("a").attr("tabindex", "0");
 
     if ($(this).attr("aria-expanded") == "true") {
+      $(this).parents(".view-content").find("div.collapse").eq(index).find("a").attr("tabindex", "-1");
       $(this).attr("aria-expanded", "false");
     }
     else {
+      $(this).parents(".view-content").find("div.collapse").eq(index).find("a").attr("tabindex", "0");
       $(this).attr("aria-expanded", "true");
     }
   });

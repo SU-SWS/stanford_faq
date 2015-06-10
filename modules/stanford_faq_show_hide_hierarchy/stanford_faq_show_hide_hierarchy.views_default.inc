@@ -62,7 +62,7 @@ function stanford_faq_show_hide_hierarchy_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="[nid]" aria-expanded="false" class="collapse-toggle" href="#[nid]" data-toggle="collapse" type="button"> <h4>[title]</h4></a>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a aria-controls="faq-[nid]" aria-expanded="false" class="collapse-toggle collapsed" href="#faq-[nid]" data-toggle="collapse" type="button"><h4>[title]</h4></a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
@@ -70,14 +70,26 @@ function stanford_faq_show_hide_hierarchy_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['element_type'] = 'div';
+  $handler->display->display_options['fields']['edit_node']['element_class'] = 'edit-link';
+  $handler->display->display_options['fields']['edit_node']['element_label_type'] = 'div';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="collapse" id="[nid]">
-<p>[body]</p>
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<div class="collapse" id="faq-[nid]">
+[body]
+<span class="edit-link">[edit_node]</span>
 </div>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Display categories */
@@ -92,16 +104,6 @@ function stanford_faq_show_hide_hierarchy_views_default_views() {
     'tid' => 'tid',
   );
   $handler->display->display_options['fields']['field_s_faq_category']['delta_offset'] = '0';
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['element_type'] = 'div';
-  $handler->display->display_options['fields']['edit_node']['element_class'] = 'edit-link';
-  $handler->display->display_options['fields']['edit_node']['element_label_type'] = 'div';
-  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
   /* Sort criterion: Content: Sorting Weight (field_s_faq_weight) */
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['id'] = 'field_s_faq_weight_value';
   $handler->display->display_options['sorts']['field_s_faq_weight_value']['table'] = 'field_data_field_s_faq_weight';
@@ -217,6 +219,30 @@ function stanford_faq_show_hide_hierarchy_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '1';
   $handler->display->display_options['arguments']['term_node_tid_depth']['break_phrase'] = TRUE;
   $handler->display->display_options['path'] = 'faq';
+  $translatables['stanford_show_hide_faq_hierarchy'] = array(
+    t('Master'),
+    t('FAQ'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('.'),
+    t('collapse[tid]-[nid]'),
+    t('<a aria-controls="faq-[nid]" aria-expanded="false" class="collapse-toggle collapsed" href="#faq-[nid]" data-toggle="collapse" type="button"><h4>[title]</h4></a>'),
+    t('Edit'),
+    t('<div class="collapse" id="faq-[nid]">
+[body]
+<span class="edit-link">[edit_node]</span>
+</div>'),
+    t('All'),
+    t('%1 FAQ'),
+    t('Title and grouping block'),
+    t('No grouping, no title Block'),
+    t('Grouping, no title block'),
+    t('Page'),
+  );
   $export['stanford_show_hide_faq_hierarchy'] = $view;
 
   return $export;

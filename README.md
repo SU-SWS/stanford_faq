@@ -1,5 +1,5 @@
 #[Stanford FAQ](https://github.com/SU-SWS/stanford_faq)
-##### Version: 7.x-4.x
+##### Version: 7.x-4.1
 
 Drupal Features module for creating Frequently asked questions (FAQ). Contains a content type for FAQ and a few default views.
 
@@ -27,7 +27,7 @@ Configuration
 After this module is installed and enabled:
 
 1. Create terms for FAQ Categories
-2. Add FAQ term reference to content types. 
+2. Add FAQ term reference to content types.
 ⋅⋅* Allow only one term per content type
 ⋅⋅* On the Manage Display for the content type, hide the FAQ field from display
 2. Create a context to display FAQs with the related node

@@ -13,7 +13,7 @@ FAQs view with bootstrap collapse (show/hide) classes. Displays FAQs related to 
 Displays FAQs related to the taxonomy terms on the page.
 
 **[Stanford FAQ Show Hide Hierarchy] (modules/stanford_faq_show_hide_hierarchy)**
-FAQs view with bootstrap collapse (show/hide) classes. Displays FAQs within the hierarchy related to the page.
+FAQs view with bootstrap collapse (show/hide) classes. Displays FAQs within the hierarchy related to the page, using headings for nested categories.
 
 Installation
 ---
@@ -30,9 +30,23 @@ After this module is installed and enabled:
 2. Add FAQ term reference to content types.
 ⋅⋅* Allow only one term per content type
 ⋅⋅* On the Manage Display for the content type, hide the FAQ field from display
-2. Create a context to display FAQs with the related node
+2. Create a context to display an FAQs view with the related node
 ⋅⋅* For the condition, consider using either path or node type
 ⋅⋅* For the reaction, place the appropriate FAQ block view
+
+Add a Question and Answer to your site
+----
+
+1. From Content > Add Content select FAQ.
+2. Enter the frequently asked question in the Question field.
+3. Enter the answer to the frequently asked question in the Answer field.
+4. Select one or more category from the Display categories list. These categories determine where the FAQ will be placed.
+5. Click Save.
+
+Add an FAQ to your page
+----
+
+* By selecting one or more category from the Display categories list, you're determining on which page(s) the FAQ will display.
 
 
 Contribution / Collaboration

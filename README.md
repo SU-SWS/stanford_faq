@@ -46,7 +46,7 @@ Add a Question and Answer to your site
 Add an FAQ to your page
 ----
 
-* By selecting one or more category from the Display categories list, you're determining on which page(s) the FAQ will display.
+Selecting one or more category from the Display categories list on both the page and the FAQ node. FAQs tagged with taxonomy terms that match a given page will appear on that page once an FAQ view is placed using Context or the blocks interface.
 
 
 Contribution / Collaboration

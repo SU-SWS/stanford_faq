@@ -1,5 +1,5 @@
 #[Stanford FAQ](https://github.com/SU-SWS/stanford_faq)
-##### Version: 7.x-4.3
+##### Version: 7.x-4.3-dev
 
 Drupal Features module for creating Frequently asked questions (FAQ). Contains a content type for FAQ and a few default views.
 

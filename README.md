@@ -28,11 +28,11 @@ After this module is installed and enabled:
 
 1. Create terms for FAQ Categories
 2. Add FAQ term reference to content types.
-⋅⋅* Allow only one term per content type
-⋅⋅* On the Manage Display for the content type, hide the FAQ field from display
-2. Create a context to display an FAQs view with the related node
-⋅⋅* For the condition, consider using either path or node type
-⋅⋅* For the reaction, place the appropriate FAQ block view
+* Allow only one term per content type
+* On the Manage Display for the content type, hide the FAQ field from display
+3. Create a context to display an FAQs view with the related node
+- For the condition, consider using either path or node type
+* For the reaction, place the appropriate FAQ block view
 
 Add a Question and Answer to your site
 ----

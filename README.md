@@ -1,4 +1,4 @@
-#[Stanford FAQ](https://github.com/SU-SWS/stanford_faq)
+# [Stanford FAQ](https://github.com/SU-SWS/stanford_faq)
 ##### Version: 7.x-4.3-dev
 
 Drupal Features module for creating Frequently asked questions (FAQ). Contains a content type for FAQ and a few default views.
@@ -30,7 +30,7 @@ All FAQ Page
 
 To see a list of all your FAQs, navigate to /faq
 
-Add a realated FAQ to your page
+To add related FAQs to a page
 ----
 
 FAQs tagged with taxonomy terms that match the terms on a given page will appear on that page once an FAQ view is placed using Context or the blocks interface.

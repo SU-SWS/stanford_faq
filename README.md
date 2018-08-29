@@ -23,16 +23,26 @@ This depends on the [FAQ contrib module] (https://www.drupal.org/project/faq). I
 
 Configuration
 ---
+Enable modules
 
-After this module is installed and enabled:
+Add a realated FAQ to your page
+----
 
-1. Create terms for FAQ Categories
-2. Add FAQ term reference to content types.
-* Allow only one term per content type
-* On the Manage Display for the content type, hide the FAQ field from display
-3. Create a context to display an FAQs view with the related node
-- For the condition, consider using either path or node type
-* For the reaction, place the appropriate FAQ block view
+FAQs tagged with taxonomy terms that match the terms on a given page will appear on that page once an FAQ view is placed using Context or the blocks interface.
+
+1. For content types that will display related FAQs on page displays, on the **Manage Fields** page add the term reference field: **Stanford FAQ**
+* Allow only one term per node
+* On the **Manage Display** for the content type, hide the FAQ field from display
+2. For placing the related FAQ view on the page content type using context, go to `admin/structure/context` 
+* For the **Condition**, consider using either path or node type. *Node type is recommended.*
+* For the **Reactions**, place the appropriate FAQ Related block view
+3. Create **Stanford FAQ Categories** terms
+* Go to `admin/structure/taxonomy_manager/voc` and select **Stanford FAQ Categories**
+4. To display related FAQs on a node page:
+* Edit the node for that page, select the appropriate term from the **FAQ Category**, and save
+* Edit the related FAQ node and select the same term from the **FAQ Category**, and save
+5. Refresh the node page and verify it displays as expected.
+* You may need to clear the site cache to get it to display 
 
 Add a Question and Answer to your site
 ----
@@ -42,12 +52,6 @@ Add a Question and Answer to your site
 3. Enter the answer to the frequently asked question in the Answer field.
 4. Select one or more category from the Display categories list. These categories determine where the FAQ will be placed.
 5. Click Save.
-
-Add an FAQ to your page
-----
-
-Selecting one or more category from the Display categories list on both the page and the FAQ node. FAQs tagged with taxonomy terms that match a given page will appear on that page once an FAQ view is placed using Context or the blocks interface.
-
 
 Contribution / Collaboration
 ---

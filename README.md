@@ -25,6 +25,11 @@ Configuration
 ---
 Enable modules
 
+All FAQ Page
+----
+
+To see a list of all your FAQs, navigate to /faq
+
 Add a realated FAQ to your page
 ----
 
